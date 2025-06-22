@@ -128,92 +128,122 @@ li a {
   width: 500px;
 }
 
-.main p {
+.main {
+  padding: 70px 50px;
+}
+
+.main-title {
   font-weight: 600;
   font-size: 50px;
-  padding: 70px 150px 0;
+  margin: 0 0 50px 0;
+  padding: 0;
 }
 
 .marketplaces {
-  padding-left: 100px;
   max-width: 1200px;
-}
-
-.firstrow,
-.secondrow {
-  display: flex;
-  gap: 30px;
-}
-
-.firstrow .box,
-.secondrow .box {
-  flex: 1;
-}
-
-.box {
-  display: flex;
-  padding-left: 200px;
-  position: relative;
-}
-
-.marketplaces > .box:last-child {
-  max-width: 48%;
   margin: 0 auto;
 }
 
-.marketplaceslogo {
-  padding-left: 10px;
+.marketplace-row {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.marketplace-row.single-card {
+  justify-content: flex-start;
+}
+
+.marketplace-row.single-card .marketplace-card {
+  max-width: 580px;
+}
+
+.marketplace-card {
+  flex: 1;
+  background: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 25px;
+  transition: box-shadow 0.3s ease;
+}
+
+.marketplace-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.marketplace-logo {
   width: 120px;
   height: 60px;
   object-fit: contain;
-  flex-shrink: 0;
 }
 
-.content {
-  flex: 1;
-}
-
-.shop {
-  position: absolute;
-  top: 30px;
-  right: 10px;
-  width: 55px;
-  height: 55px;
+.shop-icon {
+  width: 50px;
+  height: 50px;
   background-color: #f8f8f8;
-  border-radius: 50px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
-.shop img {
+.shop-icon img {
   width: 18px;
   height: 18px;
   opacity: 0.6;
 }
 
-.content p:nth-of-type(1) {
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.marketplace-name {
   font-size: 28px;
   font-weight: 600;
   color: #333;
-  padding-top: 120px;
-  padding-left: 20px;
+  margin: 0;
 }
 
-.content p:nth-of-type(2) {
+.marketplace-category {
   font-size: 14px;
   font-weight: 600;
   color: #5cf0d5;
   text-transform: uppercase;
   letter-spacing: 1px;
-  padding-top: 120px;
-  padding-left: 20px;
+  margin: 0;
 }
 
-.content p:nth-of-type(3) {
+.marketplace-description {
   font-size: 16px;
   color: #666;
-  line-height: 1.4;
-  padding-top: 120px;
-  padding-left: 20px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .marketplace-row {
+    flex-direction: column;
+  }
+
+  .marketplace-row.single-card .marketplace-card {
+    max-width: 100%;
+  }
+
+  .main {
+    padding: 50px 20px;
+  }
+
+  .main-title {
+    font-size: 36px;
+  }
 }
