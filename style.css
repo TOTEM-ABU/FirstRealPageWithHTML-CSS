@@ -246,4 +246,86 @@ li a {
   .main-title {
     font-size: 36px;
   }
+
+  header {
+    .navbar {
+      padding: 0 20px;
+
+      .navdiv {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+
+        .logo {
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+
+          img {
+            width: 120px;
+            height: auto;
+            padding-top: 10px;
+          }
+
+          p {
+            padding-top: 0;
+            font-size: 14px;
+          }
+        }
+
+        ul {
+          flex-direction: column;
+          gap: 10px;
+
+          li a {
+            margin-right: 0;
+            font-size: 16px;
+          }
+
+          .personalcabinet {
+            padding: 6px 10px;
+
+            .cabinet-content {
+              flex-direction: row;
+
+              img {
+                width: 16px;
+                height: 16px;
+              }
+
+              a {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .headermain {
+      margin: 20px;
+      padding: 10px;
+      gap: 15px;
+
+      p {
+        font-size: 16px !important;
+      }
+
+      .thisisp {
+        font-size: 24px;
+      }
+
+      h4 {
+        font-size: 14px;
+      }
+
+      button {
+        position: static;
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+      }
+    }
+  }
 }
